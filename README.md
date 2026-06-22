@@ -1,6 +1,6 @@
 # An Annotated Implementation of the HHL Algorithm
 In this notebook, we will describe and step through a Qiskit circuit implementing the HHL algorithm for solving linear systems on a quantum computer.  
-To be specific, we are trying to solve for $\vec{x}$ in a matrix equation $$ A\vec{x}=\vec{b} $$ where both $A$ and $b$ are known and (we assume) available to represent on the computer as needed. We also assume the matrix $A$ is indeed invertible, so it has no zero eigenvalues, and we will not treat negative eigenvalues at this time either.
+To be specific, we are trying to solve for $\vec{x}$ in a matrix equation $ A\vec{x}=\vec{b} $ where both $A$ and $b$ are known and (we assume) available to represent on the computer as needed. We also assume the matrix $A$ is indeed invertible, so it has no zero eigenvalues, and we will not treat negative eigenvalues at this time either.
 
 The essence of the algorithm is as follows: we are trying to compute $A^{-1}\vec{b}$, and the central observation is that by decomposing $\vec{b}$ into the eigenbasis of $A$ (or if you prefer, viewing it as a superposition of eigenvectors), the action of the inverse becomes diagonal, just dividing by the eigenvalues of $A$ instead of multiplying on each eigenvector.  
 
